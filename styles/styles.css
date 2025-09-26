@@ -83,16 +83,16 @@ header,.grid, footer{
 .grid {
       display: grid;
       align-items: center;
-    }
+}
     
-    main {
+main {
       grid-column: 2/3;
       margin: 1rem;
-    }
+}
     
-    aside {
+aside {
       width: 20rem;
       position: relative;
       grid-column: 1/2;
       grid-row: 1/2;
-    }
+}
