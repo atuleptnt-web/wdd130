@@ -50,15 +50,20 @@ aside{
 }
 aside h2 {
   position: absolute;
-  top: 47px;
-  left: 150px;
+  top: 85px;
+  left: 125px;
 }
+
 aside img{
     width:200px;
     height: auto;
 }
 
-
+h2{
+    display: block;
+    font-size:1.5;
+    ;
+}
 footer{
     margin-top:15px;
     border-top:1px solid #000;
@@ -85,7 +90,7 @@ header,.grid, footer{
       align-items: center;
 }
     
-main {
+main,header,.grid,footer {
       grid-column: 2/3;
       margin: 1rem;
 }
