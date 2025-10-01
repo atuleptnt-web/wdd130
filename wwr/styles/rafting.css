@@ -79,3 +79,48 @@ nav, p, section, article {
   margin-left: 12px;
   border-radius: 4px;
 }
+
+.header-grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  align-items: center;
+  padding: 1rem;
+}
+
+.nav-flex {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+}
+
+.history-layout {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 1rem;
+  align-items: center;
+}
+
+.adventure-gallery {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.adventure-gallery figure {
+  flex: 1 1 18%;
+  text-align: center;
+}
+
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+
+.social-icons {
+  display: flex;
+  gap: 1rem;
+}
