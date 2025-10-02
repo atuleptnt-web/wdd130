@@ -137,3 +137,8 @@ header a {
 header a:hover {
   background-color: #005fa3;   
 }
+header {
+  background-color: #2e8b57; 
+  color: white;             
+  padding: 1rem 0;          
+}
