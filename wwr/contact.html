@@ -11,68 +11,89 @@
 </head>
 
 <body>
-    <header>
-        <div class="header-grid">
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us - White Water Rafting Company</title>
+  <link rel="stylesheet" href="rafting.css" />
+</head>
+<body>
+  <header>
+    <div class="logo">White Water Rafting</div>
+    <nav>
+      <ul>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="trips.html">Trips</a></li>
+        <li><a href="contact.html" class="active">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
 
-        <img src="images/z-crossedoars.jpeg" alt="White Water Rafting Logo" />
-        <nav>
-            <ul class="nav-flex">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="trips.html">Trips</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
-            </ul>
-        </nav>
-        </div>
-    </header>
+  <main>
+    <section class="company-info">
+      <h1>Contact Us</h1>
+      <p>📍 123 Main River Street, Kolob, California</p>
+      <p>📞 +1 999 999 9999</p>
+      <p>📧 <a href="mailto:info@whitewater.com">info@whitewater.com</a></p>
 
-    <main>
-        <div class="hero">
-            <img src="images/rafting14_1024.jpg" alt="Rafting Adventure Background" />
-            <h1>White Water Rafting Co.</h1>
-            <article>
-                <img src="images/happy-client.jpg" alt="Happy Client Smiling" />
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            </article>
-        </div>
+      <div class="map-container">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!..."
+          allowfullscreen
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
+    </section>
 
-        <section>
-            <h2>History</h2>
-            <div class="history-layout">
-            <img src="images/history.jpg" alt="Rafting History">
-            <p>Founded in 1998, our rafting company has guided thousands through thrilling rapids...</p>
-            </div>
+    <section class="employee-profiles">
+      <h2>Meet Our Team</h2>
+      <div class="profiles">
+        <figure>
+          <img src="images/guide1.jpg" alt="John - Lead Guide" />
+          <figcaption>John - Lead Guide</figcaption>
+        </figure>
+        <figure>
+          <img src="images/manager.jpg" alt="Sarah - Operations Manager" />
+          <figcaption>Sarah - Operations Manager</figcaption>
+        </figure>
+        <figure>
+          <img src="images/support.jpg" alt="Mike - Customer Support" />
+          <figcaption>Mike - Customer Support</figcaption>
+        </figure>
+      </div>
+    </section>
 
-        </section>
+    <section class="contact-form">
+      <h2>Send Us a Message</h2>
+      <form action="submit_form.php" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required />
 
-        <section>
-            <h2>Adventure Awaits You!</h2>
-              <div class="adventure-gallery">
-                <figure>
-                <img src="images/diablo.jpg" alt="Los Dientes del Diablo">
-                <figcaption>Los Dientes del Diablo</figcaption>
-                </figure>
-                <figure>
-                <img src="images/mallard.jpg" alt="Big Mallard">
-                <figcaption>Big Mallard</figcaption>
-                </figure>
-                <figure>
-                <img src="images/halfday.jpg" alt="Half Day Adventure">
-                <figcaption>Half Day Adventure</figcaption>
-                </figure>
-                <figure>
-                <img src="images/salmon.jpg" alt="Salmon River Run">
-                <figcaption>Salmon River Run</figcaption>
-                </figure>
-                <figure>
-                <img src="images/thunder.jpg" alt="Thunder Creek">
-                <figcaption>Thunder Creek</figcaption>
-                </figure>
-            </div>
-            
-        </section>
-    </main>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required />
 
+        <fieldset>
+          <legend>Purpose of Message:</legend>
+          <label><input type="radio" name="purpose" value="general" required /> General Inquiry</label>
+          <label><input type="radio" name="purpose" value="reservation" /> Reservation Question</label>
+          <label><input type="radio" name="purpose" value="suggestion" /> Website Suggestion</label>
+        </fieldset>
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+
+        <label>
+          <input type="checkbox" name="newsletter" />
+          Please subscribe me to the monthly newsletter
+        </label>
+
+        <button type="submit" class="submit-btn">Send Message</button>
+      </form>
+    </section>
+  </main>
     <footer>
         <p>&copy; 2025 White Water Rafting Co. | Paul Tetteh Nerquaye-Tetteh</p>
         <nav class="socialmedia">
