@@ -153,8 +153,9 @@ header {
 .profiles {
   display: flex;
   gap: 2rem;
-  justify-content: center;
+  justify-content: space-around;
   flex-wrap: wrap;
+  margin-top: 1rem;
 }
 
 .profiles figure {
@@ -197,7 +198,7 @@ header {
 .contact-form input[type="radio"],
 .contact-form input[type="checkbox"] {
   margin-right: 0.5rem;
-}
+}mmmmmmmmmmmmmmmm
 
 .submit-btn {
   background-color: #0077cc;
@@ -212,4 +213,11 @@ header {
 
 .submit-btn:hover {
   background-color: #005fa3;
+}
+
+.social-icons a img {
+  width: 24px;
+  height: 24px;
+  margin-left: 1rem;
+  filter: grayscale(100%) brightness(0) invert(20%);
 }
