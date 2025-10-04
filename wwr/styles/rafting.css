@@ -198,7 +198,7 @@ header {
 .contact-form input[type="radio"],
 .contact-form input[type="checkbox"] {
   margin-right: 0.5rem;
-}mmmmmmmmmmmmmmmm
+} 
 
 .submit-btn {
   background-color: #0077cc;
@@ -220,4 +220,29 @@ header {
   height: 24px;
   margin-left: 1rem;
   filter: grayscale(100%) brightness(0) invert(20%);
+}
+
+.company-info {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.contact-layout {
+  display: flex;
+  gap: 2rem;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  margin: 0 16px;
+}
+
+.map-container {
+  flex: 1 1 45%;
+  min-width: 300px;
+}
+
+.contact-form {
+  flex: 1 1 45%;
+  min-width: 300px;
 }
