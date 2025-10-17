@@ -7,6 +7,7 @@
   --body-font: 'Roboto', sans-serif;
 }
 
+/* Base Reset and Typography */
 * {
   margin: 0;
   padding: 0;
@@ -15,44 +16,86 @@
 
 body {
   font-family: var(--body-font);
-  color: var(--accent1-color);
+  line-height: 1.6;
+  background-color: #f4f4f4;
+  color: #333;
 }
 
-header, main, footer {
-  width: 840px;
-  margin: 0 auto;
-}
-
-h1, h2 {
-  font-family: var(--heading-font);
-  color: var(--primary-color);
-}
-
-nav, p, section, article {
-  margin: 16px;
-  padding: 8px;
-}
-
-.socialmedia a {
-  text-decoration: none;
-}
-
-.socialmedia img{
-  width: 40px;
+img {
+  max-width: 100%;
   height: auto;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: #0077cc;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Header and Navigation */
+header {
+  background-color: #004466;
+  padding: 1rem 0;
+  color: white;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  list-style: none;
+}
+
+nav a {
+  color: #fff;
+  font-weight: bold;
+}
+
+header a {
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  background-color: #0077cc;
+  color: white;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+header a:hover {
+  background-color: #005fa3;
+}
+
+/* Footer */
+footer {
+  background-color: #004466;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Home Page Grid */
+.grid-home {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  padding: 2rem;
 }
 
 .hero {
+  text-align: center;
   position: relative;
 }
 
-.hero img {
-  display: block;
-  width: 100%;
-  height: auto;
-}
-
 .hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
   position: absolute;
   top: 20px;
   width: 100%;
@@ -61,6 +104,11 @@ nav, p, section, article {
   opacity: 0.7;
   background-color: var(--accent1-color);
   color: #fff;
+}
+
+.hero img {
+  width: 100%;
+  height: auto;
 }
 
 .hero article {
@@ -80,93 +128,124 @@ nav, p, section, article {
   border-radius: 4px;
 }
 
-.header-grid {
+.intro,
+.newsletter,
+.cta {
+  background-color: #fff;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* Newsletter Form */
+form {
   display: grid;
-  grid-template-columns: 1fr 2fr;
-  align-items: center;
-  padding: 1rem;
-}
-
-.nav-flex {
-  display: flex;
-  justify-content: space-around;
-  list-style: none;
-}
-
-.history-layout {
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  gap: 1rem;
-  align-items: center;
-}
-
-.adventure-gallery {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
   gap: 1rem;
 }
 
-.adventure-gallery figure {
-  flex: 1 1 18%;
+label {
+  font-weight: bold;
+}
+
+input,
+textarea,
+button {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  background-color: #0077cc;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #005fa3;
+}
+
+/* Trips Page Grid */
+.grid-trips {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.trip-card {
+  background-color: #fff;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
   text-align: center;
 }
 
+.trip-card h2 {
+  margin: 1rem 0;
+}
 
-footer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+.trip-card .btn {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: #0077cc;
+  color: #fff;
+  border-radius: 4px;
+}
+
+.trip-card .btn:hover {
+  background-color: #005fa3;
+}
+
+/* About Page */
+main blockquote {
+  background-color: #e0f7fa;
+  border-left: 5px solid #0077cc;
   padding: 1rem;
+  margin: 2rem 0;
+  font-style: italic;
 }
 
-.social-icons {
-  display: flex;
-  gap: 1rem;
-}
-
-header a {
-  text-decoration: none;        
-    padding: 0.5rem 1rem;        
-  background-color: #0077cc;    
-  color: white;                  
-  border-radius: 5px;            
-  transition: background-color 0.3s ease; 
-}
-
-header a:hover {
-  background-color: #005fa3;   
-}
-header {
-  background-color: #2e8b57; 
-  color: white;             
-  padding: 1rem 0;          
-}
-
-/* Reusable layout styles */
-.map-container iframe {
-  width: 100%;
-  height: 300px;
-  border: none; /* Removed inline style="border:0" */
-}
-
-.profiles {
-  display: flex;
-  gap: 2rem;
-  justify-content: space-around;
-  flex-wrap: wrap;
+.team ul {
+  list-style: disc;
+  margin-left: 2rem;
   margin-top: 1rem;
 }
 
-.profiles figure {
-  text-align: center;
-  max-width: 200px;
+/* Contact Page */
+.contact-info {
+  margin-top: 2rem;
 }
 
-.profiles img {
+.contact-info p {
+  margin: 0.5rem 0;
+}
+
+.contact-layout {
+  display: flex;
+  gap: 2rem;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  margin: 0 16px;
+}
+
+.map-container {
+  flex: 1 1 45%;
+  min-width: 300px;
+}
+
+.map-container iframe {
   width: 100%;
-  height: auto;
-  border-radius: 8px;
+  height: 300px;
+  border: none;
+}
+
+.contact-form {
+  flex: 1 1 45%;
+  min-width: 300px;
 }
 
 .contact-form form {
@@ -198,7 +277,7 @@ header {
 .contact-form input[type="radio"],
 .contact-form input[type="checkbox"] {
   margin-right: 0.5rem;
-} 
+}
 
 .submit-btn {
   background-color: #0077cc;
@@ -215,6 +294,21 @@ header {
   background-color: #005fa3;
 }
 
+/* Social Media */
+.socialmedia a {
+  text-decoration: none;
+}
+
+.socialmedia img {
+  width: 40px;
+  height: auto;
+}
+
+.social-icons {
+  display: flex;
+  gap: 1rem;
+}
+
 .social-icons a img {
   width: 24px;
   height: 24px;
@@ -222,27 +316,52 @@ header {
   filter: grayscale(100%) brightness(0) invert(20%);
 }
 
+/* Profiles */
+.profiles {
+  display: flex;
+  gap: 2rem;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+
+.profiles figure {
+  text-align: center;
+  max-width: 200px;
+}
+
+.profiles img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* Company Info */
 .company-info {
   width: 100%;
   text-align: center;
   margin-bottom: 2rem;
 }
 
-.contact-layout {
-  display: flex;
-  gap: 2rem;
-  justify-content: space-between;
-  align-items: flex-start;
-  flex-wrap: wrap;
-  margin: 0 16px;
+/* Responsive Enhancements */
+@media (min-width: 768px) {
+  .grid-home {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .newsletter {
+    grid-column: span 2;
+  }
+
+  .cta {
+    text-align: center;
+    grid-column: span 2;
+  }
 }
 
-.map-container {
-  flex: 1 1 45%;
-  min-width: 300px;
-}
-
-.contact-form {
-  flex: 1 1 45%;
-  min-width: 300px;
+header, main, footer {
+  width: 840px;
+  margin: 0 auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
