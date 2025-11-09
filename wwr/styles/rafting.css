@@ -365,3 +365,6 @@ header, main, footer {
   padding-left: 1rem;
   padding-right: 1rem;
 }
+.header-logo {
+  margin-bottom: 1rem;
+}
